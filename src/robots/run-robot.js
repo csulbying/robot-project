@@ -4,7 +4,7 @@ export function runRobot(go, state) {
   for (let turn = 0; ; turn++) {
     if (state.parcels.length == 0) {
       print(`Done in ${turn} turns`)
-      break
+      return
     }
 
     printParcels(state.parcels)

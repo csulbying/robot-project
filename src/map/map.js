@@ -1,7 +1,7 @@
 import { paths } from './paths.js'
 
 function addEdge(map, from, to) {
-  if (map[from] == null) {
+  if (map[from] === undefined) {
     map[from] = [to]
   } else {
     map[from].push(to)
@@ -21,5 +21,6 @@ function buildGraph(paths) {
 }
 
 export const map = buildGraph(paths)
+export const all_places = Object.keys(map)
 
 export const START_PLACE = 'Post Office'
